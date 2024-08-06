@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    color: #ffffff;
+}
+body{
+    min-height: 100vh;
+    background-color: #2b2929;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.container{
+    position: relative;    
+}
+.clock{
+    width: 400px;
+    height: 400px;
+    background-color: rgba(46, 46, 45,12);
+    border-radius: 50%;
+    border: 2px solid rgb(86, 86, 86);
+    box-shadow: 8px 5px 40px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock span{
+    position: absolute;
+    transform: rotate(calc(30deg * var(--i)));
+    inset:15px;
+    text-align: center;
+
+}
+.clock span b{
+    transform:rotate(calc(-30deg * var(--i)));
+    display: inline-block;
+    font-size: 30px;
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+.hand{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hand i{
+    position: absolute;
+    background-color: var(--clr);
+    width: var(--w);
+    height: var(--h);
+    border-radius: 20px;
+}
+
+/* digital Clock */
+
+.digital{
+    align-items: center;
+    height: 200px;
+    width: 400px;
+    border: 2px solid rgb(86, 86, 86);
+    box-shadow: 8px 5px 40px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    flex-direction: column;
+}
+
+#date{
+    font-size: 30px;
+    padding-bottom: 5px;
+}
+
+.time{
+    font-size: 80px;
+}
